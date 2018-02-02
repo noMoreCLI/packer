@@ -59,6 +59,7 @@ func (s StepCleanVMX) Run(_ context.Context, state multistep.StateBag) multistep
 		vmxData[ide+"devicetype"] = "cdrom-raw"
 		vmxData[ide+"filename"] = "auto detect"
 		vmxData[ide+"clientdevice"] = "TRUE"
+		vmxData[ide+"present"] = "FALSE"
 	}
 
 	if s.VNCEnabled {
